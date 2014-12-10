@@ -1,4 +1,4 @@
-MDLXChecker
+MDLX Checker
 ===========
 
 A utility that parses all SimObjects in Flight Simulator to verify that model files are FSX native.
