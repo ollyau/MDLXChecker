@@ -7,10 +7,10 @@ namespace MDLXChecker {
         public const string NOT_FOUND = "NOT_FOUND";
 
         protected string _registryKey;
+        protected string _registryValue;
         protected string _cfgRelativePath;
         protected string _name;
 
-        private string _registryValue;
         private string _directory;
         private string _cfgPath;
 
@@ -83,6 +83,15 @@ namespace MDLXChecker {
             _registryKey = @"HKEY_LOCAL_MACHINE\SOFTWARE\Lockheed Martin\Prepar3D v2";
             _cfgRelativePath = @"Lockheed Martin\Prepar3D v2\Prepar3D.CFG";
             _name = "Lockheed Martin Prepar3D v2";
+        }
+    }
+
+    class FlightSimulatorXSteamEdition : Simulator {
+        public FlightSimulatorXSteamEdition() {
+            _registryKey = @"HKEY_LOCAL_MACHINE\SOFTWARE\DovetailGames\FSX";
+            _registryValue = "install_path";
+            _cfgRelativePath = @"Microsoft\FSX-SE\fsx_se.CFG";
+            _name = "Dovetail Games Microsoft Flight Simulator X: Steam Edition";
         }
     }
 }

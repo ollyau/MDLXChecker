@@ -36,12 +36,16 @@ namespace MDLXChecker {
                 else if (arg.Equals("p3d2", StringComparison.InvariantCultureIgnoreCase)) {
                     sims.Add(new Prepar3D2());
                 }
+                else if (arg.Equals("fsxse", StringComparison.InvariantCultureIgnoreCase)) {
+                    sims.Add(new FlightSimulatorXSteamEdition());
+                }
             })) {
                 List<Simulator> allSims = new List<Simulator>();
                 allSims.Add(new FlightSimulatorX());
                 allSims.Add(new EnterpriseSimulationPlatform());
                 allSims.Add(new Prepar3D());
                 allSims.Add(new Prepar3D2());
+                allSims.Add(new FlightSimulatorXSteamEdition());
                 sims = new List<Simulator>(allSims.Where(x => x.Directory != Simulator.NOT_FOUND));
             }
 
